@@ -1,6 +1,8 @@
 'use strict';
 
 const rectangle = {
+  widthRectangle: 5,
+  heightRectangle: 5,
   set widthRect(width) {
     if (typeof width === 'number') {
       this.widthRectangle = width;
@@ -12,14 +14,10 @@ const rectangle = {
     }
   },
   get perimeter() {
-    const width = this.widthRectangle || 5;
-    const height = this.heighthRectangle || 5;
-    return `${width * 2 + height * 2} см`;
+    return `${this.widthRectangle * 2 + this.heightRectangle * 2} см`;
   },
   get square() {
-    const width = this.widthRectangle || 5;
-    const height = this.heighthRectangle || 5;
-    return `${width * height} см2`;
+    return `${this.widthRectangle * this.heightRectangle} см2`;
   },
 };
 
